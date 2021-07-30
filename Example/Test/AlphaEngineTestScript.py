@@ -91,7 +91,7 @@ def test_eval_method():
                    'starting_cash': 10000,
                    'asset_dict_parameters': {'asset_A': {'drift':.2,'volatility':.1,'delta_t':1/252,'initial_price':100},
                                              'asset_B': {'drift':.4,'volatility':.3,'delta_t':1/252,'initial_price':100}},
-                   'sample_size': 5}
+                   'sample_size': 10}
 
     engine.evaluate(eval_params=test_params,return_csv=False,filename='test.csv')
 
