@@ -1,5 +1,6 @@
 import pandas as pd
 from AlphaPackage.ToolKit import StochasticProcessManager
+from AlphaPackage.ToolKit import compare
 import copy
 '''
 Created by Maximo Xavier DeLeon on 6/23/2021
@@ -135,6 +136,8 @@ class Engine:
 
 
 
+            compare(returns_df['strategy_pnl'].values, returns_df['benchmark_pnl'].values,0.05,10)
+
 
 
 
@@ -146,17 +149,3 @@ class Engine:
         else: pass
 
 
-
-
-
-
-        # +++++++++++++++++ do this now +++++++++++++++++
-        # take in the strategy, a benchmark, GBM parameters, N number of GBM processes for M assets
-        # run strategy on each GBM process along side the benchmark
-        # t-test for signifigance, return p-value
-
-
-
-        # +++++++++++++++++ do this later +++++++++++++++++
-        # run strategy and benchmark on actual historical data with similar if not identical GBM parameters
-        # determine whether or not the strategy just got lucky or is within the convidence interval produced from our GBM
